@@ -2,30 +2,23 @@ package com.hakowalk.b1012216.hakowalk;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MapActivity extends ActionBarActivity {
+public class CourseActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
-
-        // ツールバーをアクションバーとしてセット
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
-
-        // タイトルを設定
-        toolbar.setTitle("aaaa");
+        setContentView(R.layout.activity_course);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_map, menu);
+        getMenuInflater().inflate(R.menu.menu_course, menu);
         return true;
     }
 

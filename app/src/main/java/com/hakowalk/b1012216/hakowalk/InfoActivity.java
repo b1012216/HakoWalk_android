@@ -7,25 +7,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MapActivity extends ActionBarActivity {
+public class InfoActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_info);
 
-        // ツールバーをアクションバーとしてセット
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
 
-        // タイトルを設定
-        toolbar.setTitle("aaaa");
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_map, menu);
+        getMenuInflater().inflate(R.menu.menu_info, menu);
         return true;
     }
 

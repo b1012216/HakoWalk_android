@@ -1,5 +1,6 @@
 package com.hakowalk.b1012216.hakowalk;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import android.widget.ImageButton;
 public class MainActivity extends ActionBarActivity {
 
     private ImageButton map_btn;
+    private ImageButton course_btn;
+    private ImageButton info_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,28 +31,30 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
+        this.course_btn = (ImageButton) findViewById(R.id.course_btn);
+        this.course_btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Sub 画面を起動
+                Intent intent = new Intent();
+                intent.setClassName("com.hakowalk.b1012216.hakowalk",
+                        "com.hakowalk.b1012216.hakowalk.CourseActivity");
+                startActivity(intent);
+            }
+        });
+
+        this.info_btn = (ImageButton) findViewById(R.id.info_btn);
+        this.info_btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Sub 画面を起動
+                Intent intent = new Intent();
+                intent.setClassName("com.hakowalk.b1012216.hakowalk",
+                        "com.hakowalk.b1012216.hakowalk.InfoActivity");
+                startActivity(intent);
+            }
+        });
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
